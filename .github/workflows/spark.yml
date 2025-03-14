@@ -17,8 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - run: ls -la  
-  
+    - run: ls -la
     - uses: actions/checkout@v4
 
 
@@ -37,6 +36,7 @@ jobs:
         hadoop-version: '3'
 
     - run: spark-submit --version
+
 
 
 
