@@ -15,33 +15,7 @@ jobs:
   spark:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - run: ls -la
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
-    - uses: actions/setup-java@v4
-      with:
-        java-version: '21'
-        distribution: temurin
-    - uses: vemonet/setup-spark@v1
-      with:
-        spark-version: '3.5.3'
-        hadoop-version: '3'
-    - run: spark-submit --version
-    rom pyspark.sql import SparkSession
-
-# Create a spark session
-spark = SparkSession.builder.appName("HelloWorld").getOrCreate()
-
-# Use sql() to write a raw SQL query
-df = spark.sql("SELECT 'Hello World' as hello")
-
-# Print the dataframe
-df.show()
-df.write.mode("overwrite").json("results")
+   
 
 
 
