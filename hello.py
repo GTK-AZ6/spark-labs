@@ -28,16 +28,7 @@ runs-on: ubuntu-latest
         git add results
         git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
         git push
-- name: GIT commit and push docs
-      env: 
-        CI_COMMIT_MESSAGE: save spark results
-        CI_COMMIT_AUTHOR: adsoft 
-      run: |
-        git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
-        git config --global user.email "adsoft@live.com.mx"
-        git add results
-        git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
-        git push
+
 
 
 
